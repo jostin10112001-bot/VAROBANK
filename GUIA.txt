@@ -1,0 +1,55 @@
+=====================================================
+ VARO BANK - GUIA PASO A PASO (v22.0.0)
+=====================================================
+
+1. INSTALAR
+   - Instala Node.js (nodejs.org).
+   - Crea la carpeta "varo" y pega dentro los 8 archivos.
+   - Terminal en esa carpeta:
+        npm install
+        npm start
+   - Abre http://localhost:3000
+
+2. ENTRAR COMO ADMIN (OCULTO AL CLIENTE)
+   Tres formas, elige la que quieras:
+     a) 3 toques rapidos en el logo "varo"
+     b) Ctrl + Shift + A
+     c) 2 toques en el "© 2026" del pie (o el puntico al lado)
+   Usuario: admin     Clave: admin123
+   (Cambiala en server.js, linea ADMIN_PASS)
+
+3. EL CLIENTE NUNCA VE EL BOTON DE ADMIN
+   En el pie ya no aparece "Acceso administrativo".
+
+4. COBRAR
+   - El cliente se registra y adjunta el frente de su documento.
+   - Tu lo ves en Clientes -> su ficha.
+   - Tu decides el precio de activacion y se lo dices por correo.
+   - Cuando pague: Ajustar saldo -> set -> importe.
+   - ACTIVAR tarjeta: boton "ACTIVAR tarjeta" en su ficha.
+   - Mostrar CVV: boton "Mostrar CVV" en su ficha.
+   - Movimientos: "Agregar movimiento" (solo tu).
+
+5. BANCOS POR PAIS
+   Panel admin -> pestaña "Bancos".
+   Un banco por linea en cada pais. Estos salen en el desplegable
+   cuando el cliente hace una transferencia.
+
+6. EDITAR TODO
+   - Editor web: textos, telefono, WhatsApp, correo, direccion.
+   - Editor avanzado (JSON): absolutamente todo (FAQ, planes, textos).
+   - Ajustes: recarga de referencia, 2FA, CVV, cotizacion cripto, planes.
+
+7. PUBLICAR EN INTERNET
+   - Sube la carpeta a GitHub.
+   - Render.com > New > Web Service > conecta el repo.
+   - Build: npm install    Start: npm start
+   - Compra un dominio y apuntalo al servidor.
+
+8. APARECER EN GOOGLE
+   - Google Search Console > añade tu dominio > sube sitemap.xml.
+   - Cambia TU-DOMINIO.com en robots.txt, sitemap.xml e index.html.
+
+9. ADMIN DESDE EL CELULAR
+   - Abre tu web en el movil y haz 3 toques en el logo.
+   - El panel esta hecho para movil.

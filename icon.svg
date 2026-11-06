@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Fondo morado con las dimensiones y curvatura de tu contenedor original -->
+  <rect width="128" height="128" rx="30" fill="#8B3DFF"/>
+  
+  <!-- Letra V mayúscula, en color blanco y alineada al centro del contenedor -->
+  <text x="64" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="76" font-weight="900" text-anchor="middle" fill="#FFFFFF">V</text>
+</svg>

